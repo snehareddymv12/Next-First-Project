@@ -17,7 +17,8 @@ const page = () => {
     <>
     <div className="max-w-lg mx-auto mt-10">
         <h1 className="text-2xl font-bold mb-4">Fetch all  posts</h1>
-        {posts.length > 0 && (
+        <div className='grid grid-cols-3  gap-x-6 gap-y-3'>
+        {posts.length > 0  && (
         posts.map((post) => (
           <div key={post.id} className="border p-2 my-2 rounded">
             <h3 className="font-bold">{post.title}</h3>
@@ -25,6 +26,7 @@ const page = () => {
           </div>
         ))
       ) }
+        </div>
 
     </div>
     
